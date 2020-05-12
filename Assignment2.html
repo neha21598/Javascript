@@ -1,0 +1,132 @@
+<html>
+<head>
+<script>
+function maximum()
+{
+	var arr=[10,20,30,40,50,60,70,80,90,100];
+
+	var max=0;
+	var i;
+	for(i=0;i<10;i++)
+	{
+		if(arr[i]>max)
+		max=arr[i];
+	}
+	document.getElementById("demo").innerHTML=max;
+}
+function copy()
+{
+	var x=document.getElementById("demo5");
+	demo6.value=demo5.value;
+}
+function asc()
+{
+var arr1 = [50,90,30,10,35,95,20,66,69,34];
+arr1.sort();
+document.getElementById("demo7").innerHTML = arr1;
+}
+function desc()
+{
+var arr2 = ["Neha","Rupal","Shivani","Charu","Rutuja"];
+arr2.sort();
+arr2.reverse();
+document.getElementById("demo8").innerHTML = arr2;
+}
+function check()
+{
+var str1="nehapatiil3997@gmail.com";
+var c=str1.includes("@");
+document.getElementById("demo9").innerHTML=c;
+}
+function myfunction(min, max)
+{
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var mob=8790865420;
+var str=mob.toString();
+document.getElementById("demo10").innerHTML=mob;
+function mobno()
+{
+	if(str.length==10)
+	document.getElementById("demo10").innerHTML="valid";
+	else
+	document.getElementById("demo11").innerHTML="invalid";
+}
+
+</script>
+</head>
+<body>
+
+<h3>1]To print maximum number in an array</h3>
+<h3 style='color:red'id="demo">Click here to know the maximum number in an array</h3>
+<button onclick="maximum()">Max Number</button>
+
+<hr/>
+
+<h3>2]To print Name in p tag</h3>
+<p style='color:red' id="demo1">click here to know my name</p>
+<button onclick='document.getElementById("demo1").innerHTML="Neha Patil"'>Know My Name</button>
+
+<hr/>
+
+<h3>3]To unhide the hidden name</h3>
+<h2 id="demo2" style="display:none;color:red">Neha</h2>
+<button type="button" onclick='document.getElementById("demo2").style="display:block;color:red" '>Click</button>
+
+<hr/>
+
+<h3>4]To change font size on button click</h3>
+<h2 id="demo3" style="font-size:10;color:red">Neha</h2>
+<button type="button" onclick='document.getElementById("demo3").style="font-size:20;;color:red" '>Click</button>
+
+<hr/>
+
+<h3>5]To display current date and time on button click</h3>
+<h2 id="demo4" style='color:red'></h2>
+<button type="button" onclick='document.getElementById("demo4").innerHTML=Date() '>click</button>
+
+<hr/>
+
+<h3>6]To copy data from 1 textbox to another</h3>
+<form>
+<label>Enter data1:</label>
+<input type="text" id="demo5" style='color:red'></input>
+<label>Enter data2:</label>
+<input type="text" id="demo6" style='color:red'></input>
+<button type="button" onclick="copy()">copy</button>
+</form>
+
+<hr/>
+
+<h3>7]To display numbers in ascending order</h3>
+<h3 id="demo7" style='color:red'></h3>
+<button type="button" onclick="asc()">Ascending</button>
+
+<hr/>
+
+<h3>8]To display names in descending order</h3>
+<h3 style='color:red' id="demo8"></h3>
+<button type="button" onclick="desc()">Descending</button>
+
+<hr/>
+
+<h3>9]To check @ present or not in email id</h3>
+<h1 id="demo9" style='color:red'></h1>
+<button onclick="check()">click</button>
+
+<hr/>
+
+<h3>10]To print random number</h3>
+<h3 id="demo12" style='color:red'></h3>
+<button onclick="document.getElementById('demo12').innerHTML = myfunction(0,10)">Click Me</button>
+
+<hr/>
+
+<h3>11]To check mobile no has 10 digits or not</h3>
+<h3 id="demo10" style='color:red'></h3>
+<button onclick="mobno()">click</button>
+<h3 id="demo11"style='color:red'></h3>
+
+</body>
+</html>
