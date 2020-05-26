@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Assignment 3</title></head>
+<body>
+<h1 id="demo" style=color:red></h1>
+<h1 id="show" style=color:gray></h1>
+<script>
+
+function sum() {
+  var i;
+  var add = 0;
+  for (i = 0; i < arguments.length; i++) {
+	add=add+arguments[i];
+  }
+  return add;
+}
+document.getElementById("demo").innerHTML="Sum of 2 , 3 and 5 is :"+ sum(2,3,5);
+document.getElementById("show").innerHTML="Sum of 2 and 4 is :"+ sum(2,4);
+
+</script>
+</body>
+</html>

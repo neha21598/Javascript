@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Self invoking function</title></head>
+<body>
+<h3 id="demo" style=color:red></h3>
+<script>
+x=(function(n)
+{
+return n*n;
+})(2);
+document.getElementById("demo").innerHTML="Square is:"+x;
+</script></body>
+</html>
