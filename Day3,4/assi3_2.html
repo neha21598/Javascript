@@ -1,0 +1,27 @@
+<html>
+        <h3 id="demo"></h3>
+        <script>
+            class Account
+            {
+                constructor(name,bal)
+                {
+                    this.name=name;
+                    this.bal=5000;
+                }
+                deposit(x)
+                {
+                    this.bal=this.bal+x;
+                }
+                display()
+                {
+                    return "Name of account holder is "+this.name+" <br>"+"initial balance=5000"+"<br>"+"<b>new balance=</b>"+" "+this.bal;
+                }
+            
+            }
+            obj=new Account("Neha Patil");
+            obj.deposit(4000);
+        
+            document.getElementById("demo").innerHTML = obj.display();
+        </script>
+    </body>
+</html>
