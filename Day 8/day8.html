@@ -1,0 +1,63 @@
+<html>
+<body>
+<h4 id="demo"></h4>
+<script>
+class employee
+{
+	constructor(id,name,salary)
+	{
+	this.id=id;
+	this.name=name;
+	this.salary=salary;
+	this.netsalary="";
+	}
+set eid(i)
+{
+	this.id=i;
+}
+set ename(n)
+{
+	this.name=n;
+}
+set esalary(s)
+{
+	this.salary=s;
+}
+get eid()
+{
+return this.id;
+}
+get ename()
+{
+return this.name;
+}
+get esal()
+{
+return this.salary;
+}
+get enetsal()
+{
+return this.netsalary;
+}
+calculateNetsalary()
+{
+	let TDS=0.1;
+	this.netsalary=this.salary-(TDS*this.salary);
+}
+display()
+{
+document.write("Id="+this.id+"<br>");
+document.write("Name="+this.name+"<br>");
+document.write("Salary="+this.salary+"<br>");
+document.write("Netsalary="+this.netsalary+"<br>");
+}
+}
+e1=new employee(1,"Neha",2000);
+e2=new employee(2,"charu",3000);
+e1.calculateNetsalary()
+e1.display();
+e2.calculateNetsalary()
+e2.display();
+</script>
+</body>
+</html>

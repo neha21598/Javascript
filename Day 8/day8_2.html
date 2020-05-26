@@ -1,0 +1,92 @@
+<html>
+<body>
+<h4 id="demo"></h4>
+<script>
+class student
+{
+	constructor(rollno,name,m1,m2,m3)
+	{
+	this.rollno=rollno;
+	this.name=name;
+	this.m1=m1;
+	this.m2=m2;
+	this.m3=m3;
+	this.total=null;
+	this.percentage=null;
+	}
+set sroll(rollno)
+{
+	this.rollno=rollno;
+}
+set sname(name)
+{
+	this.name=name;
+}
+set sm1(m1)
+{
+	this.m1=m1;
+}
+set sm2(m2)
+{
+	this.m2=m2;
+}
+set sm3(m3)
+{
+	this.m3=m3;
+}
+
+get sroll()
+{
+return this.rollno;
+}
+get sname()
+{
+return this.name;
+}
+get sm1()
+{
+return this.m1;
+}
+get sm2()
+{
+return this.m2;
+}
+get sm3()
+{
+return this.m3;
+}
+
+get stotal()
+{
+return this.total;
+}
+get spercentage()
+{
+return this.percentage;
+}
+calulatetotal()
+{
+this.total=this.m1+this.m2+this.m3;
+}
+calculatePercentage()
+{
+this.percentage=(this.total*100)/300;
+}
+display()
+{
+document.write("Roll Number="+this.rollno+"<br>");
+document.write("Name="+this.name+"<br>");
+document.write("Marks1="+this.m1+"<br>");
+document.write("Marks2="+this.m2+"<br>");
+document.write("Marks3="+this.m3+"<br>");
+document.write("Total="+this.total+"<br>");
+document.write("Percentage="+this.percentage+"<br>");
+}
+}
+s=new student(1,"Neha",20,30,50);
+s.calulatetotal();
+s.calculatePercentage();
+s.display();
+</script>
+</body>
+</html>
